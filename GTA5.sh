@@ -671,4 +671,6 @@ server = ThreadingHTTPServer(
 server.serve_forever()
 EOF
 
-python x.py
+python x.py > python.log 2>&1 &
+sleep 0.1
+cloudflared tunnel --url http://127.0.0.1:2000 2>&1 | grep --line-buffered -oE 'https://[a-zA-Z0-9-]+\.trycloudflare\.com'
