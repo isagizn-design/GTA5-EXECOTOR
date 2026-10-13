@@ -1,663 +1,663 @@
-nwosid
-& )
-enod  
-if    
-kaerb      
-"ATSOPSER$" 'n\s%' ftnirp      
-neht ;]] *ptth == "ATSOPSER$" [[       
-&& ]] *"retemarap lru eht gnissiM"* =! "ATSOPSER$" [[       
-&& ]] *"nekat ydaerla"* =! "ATSOPSER$" [[ fi    
+cat > x.py <<'EOF'
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+from urllib.parse import urljoin, quote, unquote, urlparse
+from http.cookies import SimpleCookie
+import ssl
+import html
+import re
+import random
 
-)llun/ved/>2 "EMON$=lrutrohs" edocnelru-atad--      
-\ "LRU$=lru" edocnelru-atad--      
-\ 'elpmis=tamrof' edocnelru-atad--      
-\ 'netrohs/ipa/moc.hsinavlru//:sptth' G- Ss- lruc($=ATSOPSER    
+HOST = "0.0.0.0"
+PORT = random.randint(10000, 60000)
 
-if    
-"N$-duolc-8-niW"=EMON      
-esle    
-"duolc-8-niW"=EMON      
-neht ;] 1 qe- "N$" [ fi    
-od ;)001 1 qes($ ni N rof  
+START_URL = "https://browser7.win/win8/"
 
-enod  
-1 peels    
-od ;] "LRU$" n- [ && )1n- daeh | llun/ved/>2 "gol.deralfduolc/EMOH$" 'moc.\eralfduolcyrt.\+]-.9-0Z-Az-a[//:sptth' Eo- perg($=LRU litnu  
-(
-
-nwosid & llun/ved/ < 1&>2 "gol.deralfduolc/EMOH$" > 0002:tsohlacol//:ptth lru-- lennut deralfduolc puhon
-
-
-nwosid & llun/ved/< 1&>2 llun/ved/> yp.x nohtyp puhon
-
-FOE
-)(reverof_evres.revres
-
+USER_AGENT = (
+    "Mozilla/5.0 (Linux; Android 14; K) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/140.0.0.0 Mobile Safari/537.36"
 )
-reldnaH    
-,)TROP ,TSOH(    
-(revreSPTTHgnidaerhT = revres
 
-)
-"===================================="    
-(tnirp
+ssl_context = ssl.create_default_context()
 
-)
-"}TROP{:1.0.0.721//:ptth "f    
-":odaicini yxorP"f    
-(tnirp
+# Cookies separados por domínio
+cookies = {}
 
-)
-"===================================="    
-(tnirp
 
-
-)            
-)rorre(rts                
-,005                
-(rorre_dnes.fles            
-
-)            
-)rorre(rper                
-,"]ORRE["                
-(tnirp            
-
-:rorre sa noitpecxE tpecxe        
-
-)            
-"etis oa ratcenoc oa orrE"                
-,205                
-(rorre_dnes.fles            
-
-)            
-rorre                
-,"]OÃXENOC ED ORRE["                
-(tnirp            
-
-:rorre sa )rorrEtuoemiT ,rorrELRU( tpecxe        
-
-)atad(etirw.elifw.fles                
-:"DAEH" =! dohtem fi            
+def make_proxy_url(url):
+    return "/proxy/" + quote(url, safe="")
 
-)(sredaeh_dne.fles            
-
-)            
-))atad(nel(rts                
-,"htgneL-tnetnoC"                
-(redaeh_dnes.fles            
 
-)            
-epyt_tnetnoc                
-,"epyT-tnetnoC"                
-(redaeh_dnes.fles            
+def extract_proxy_url(path):
+    prefix = "/proxy/"
 
-)            
-"8-ftu=tesrahc ;lmth/txet"                
-,"epyT-tnetnoC"                
-(teg.sredaeh.rorre = epyt_tnetnoc            
-
-)            
-edoc.rorre                
-(esnopser_dnes.fles            
-
-)            
-sredaeh.rorre                
-,tegrat                
-(seikooc_evas            
-
-)(daer.rorre = atad            
-
-:rorre sa rorrEPTTH tpecxe        
-
-)atad(etirw.elifw.fles                
-:"DAEH" =! dohtem fi            
-
-)(sredaeh_dne.fles            
-
-)                    
-)                        
-etulosba                            
-(lru_yxorp_ekam                        
-,"noitacoL"                        
-(redaeh_dnes.fles                    
-
-:)                
-)"//:sptth" ,"//:ptth"(                    
-(htiwstrats.etulosba fi                
-
-)                
-noitacol                    
-,tegrat                    
-(niojlru = etulosba                
-
-:noitacol fi            
-
-)            
-"noitacoL"                
-(teg.sredaeh.esnopser = noitacol            
-.yxorp od LRU me #            
-onretxe noitacoL amrofsnart #            
-:sotnemanoicerideR #            
-
-)            
-"ehcac-on"                
-,"lortnoC-ehcaC"                
-(redaeh_dnes.fles            
-
-)            
-))atad(nel(rts                
-,"htgneL-tnetnoC"                
-(redaeh_dnes.fles            
-
-)            
-epyt_tnetnoc                
-,"epyT-tnetnoC"                
-(redaeh_dnes.fles            
-
-)            
-sutats.esnopser                
-(esnopser_dnes.fles            
-
-)                
-"8-ftu=tesrahc ;lmth/txet"                    
-( = epyt_tnetnoc                
-
-)                
-tegrat                    
-,atad                    
-(lmth_etirwer = atad                
-
-:lmth_si fi            
-
-)            
-)(rewol.epyt_tnetnoc ni                
-"lmth/txet"                
-( = lmth_si            
-
------------------------------------------ #            
-ODACIFIDOM É LMTH ETNEMOS #            
------------------------------------------ #            
-
-)            
-"maerts-tetco/noitacilppa"                
-,"epyT-tnetnoC"                
-(teg.sredaeh.esnopser = epyt_tnetnoc            
-
-)(daer.esnopser = atad            
-
-)            
-sredaeh.esnopser                
-,tegrat                
-(seikooc_evas            
-
-)            
-03=tuoemit                
-,txetnoc_lss=txetnoc                
-,qer                
-(nepolru = esnopser            
-
-)            
-dohtem=dohtem                
-,sredaeh_tseuqer=sredaeh                
-,ydob=atad                
-,tegrat                
-(tseuqeR = qer            
+    if not path.startswith(prefix):
+        return None
 
-:yrt        
+    try:
+        url = unquote(path[len(prefix):])
 
-epyt_tnetnoc = ]                
-"epyT-tnetnoC"                    
-[sredaeh_tseuqer                
-:epyt_tnetnoc fi            
+        if url.startswith(("http://", "https://")):
+            return url
+    except Exception:
+        pass
 
-)            
-"epyT-tnetnoC"                
-(teg.sredaeh.fles = epyt_tnetnoc            
-
-)htgnel(daer.elifr.fles = ydob            
-
-0 = htgnel                
-:noitpecxE tpecxe            
-)                
-)                    
-"0"                        
-,"htgneL-tnetnoC"                        
-(teg.sredaeh.fles                    
-(tni = htgnel                
-:yrt            
-
-:"TSOP" == dohtem fi        
-
-enoN = ydob        
-
-eikooc = ]"eikooC"[sredaeh_tseuqer            
-:eikooc fi        
-
-)tegrat(redaeh_eikooc_teg = eikooc        
-
-}        
-"ehcac-on"                
-:"lortnoC-ehcaC"            
-
-,"ytitnedi"                
-:"gnidocnE-tpeccA"            
-.LMTH od oãçaretla a #            
-airatlucifid euq oãsserpmoc edepmI #            
-
-,"7.0=q;ne,8.0=q;SU-ne,9.0=q;tp,RB-tp"                
-:"egaugnaL-tpeccA"            
-
-,"8.0=q;*/*,gnpa/egami"                
-",pbew/egami,fiva/egami"                
-",9.0=q;lmx/noitacilppa"                
-",lmx+lmthx/noitacilppa,lmth/txet"                
-:"tpeccA"            
-
-,TNEGA_RESU :"tnegA-resU"            
-{ = sredaeh_tseuqer        
-
-)"================================"(tnirp        
-)tegrat ,":LRU"(tnirp        
-)"================================"(tnirp        
-)(tnirp        
-
-nruter                
-)                
-"adartnocne oãn anigáP"                    
-,404                    
-(rorre_dnes.fles                
-:esle            
-LRU_TRATS = tegrat                
-:"/" == htap.fles fi            
-
-:enoN si tegrat fi        
-anigáp ariemirP #        
-
-)        
-htap.fles            
-(lru_yxorp_tcartxe = tegrat        
-
-:)dohtem ,fles(yxorp fed    
-
-)"DAEH"(yxorp.fles        
-:)fles(DAEH_od fed    
-
-)"TSOP"(yxorp.fles        
-:)fles(TSOP_od fed    
-
-)"TEG"(yxorp.fles        
-:)fles(TEG_od fed    
-
-)sgra % tmf ,"]PTTH["(tnirp        
-:)sgra* ,tmf ,fles(egassem_gol fed    
-
-"1.1/PTTH" = noisrev_locotorp    
-
-:)reldnaHtseuqeRPTTHesaB(reldnaH ssalc
-
-
-)"8-ftu"(edocne.txet nruter    
-
-txet + sj_detcejni = txet        
-:esle    
-
-)        
-I.er=sgalf            
-,1=tnuoc            
-,txet            
-,">daeh/<" + sj_detcejni            
-,">*s\daeh/<"r            
-(bus.er = txet        
-
-:)    
-I.er=sgalf        
-,txet        
-,">*s\daeh/<"r        
-(hcraes.er fi    
->daeh/< od setna atejnI #    
+    return None
 
+
+def domain_of(url):
+    return urlparse(url).netloc
+
+
+def get_cookie_header(url):
+    domain = domain_of(url)
+
+    jar = cookies.get(domain, {})
+
+    return "; ".join(
+        f"{name}={value}"
+        for name, value in jar.items()
+    )
+
+
+def save_cookies(url, headers):
+    domain = domain_of(url)
+
+    if domain not in cookies:
+        cookies[domain] = {}
+
+    try:
+        values = headers.get_all("Set-Cookie", [])
+    except Exception:
+        values = []
+
+    for value in values:
+        try:
+            c = SimpleCookie()
+            c.load(value)
+
+            for name, morsel in c.items():
+                cookies[domain][name] = morsel.value
+
+        except Exception:
+            pass
+
+
+def rewrite_resource_url(value, page_url):
+    value = value.strip()
+
+    if not value:
+        return value
+
+    # Não mexer nesses esquemas
+    if value.startswith((
+        "#",
+        "javascript:",
+        "data:",
+        "blob:",
+        "mailto:",
+        "tel:"
+    )):
+        return value
+
+    try:
+        absolute = urljoin(page_url, value)
+    except Exception:
+        return value
+
+    if absolute.startswith(("http://", "https://")):
+        return make_proxy_url(absolute)
+
+    return value
+
+
+def rewrite_html(data, page_url):
+
+    text = data.decode(
+        "utf-8",
+        errors="replace"
+    )
+
+    # Remove CSP que pode bloquear o proxy.
+    text = re.sub(
+        r"<meta\b[^>]*"
+        r"http-equiv\s*=\s*['\"]"
+        r"Content-Security-Policy"
+        r"['\"][^>]*>",
+        "",
+        text,
+        flags=re.I
+    )
+
+    # -------------------------------------------------
+    # HREF
+    # -------------------------------------------------
+
+    def href_callback(match):
+
+        before = match.group(1)
+        quote_char = match.group(2)
+        value = match.group(3)
+
+        new_value = rewrite_resource_url(
+            value,
+            page_url
+        )
+
+        return (
+            before +
+            quote_char +
+            html.escape(
+                new_value,
+                quote=True
+            ) +
+            quote_char
+        )
+
+    text = re.sub(
+        r'(\bhref\s*=\s*)(["\'])(.*?)\2',
+        href_callback,
+        text,
+        flags=re.I
+    )
+
+    # -------------------------------------------------
+    # SRC
+    # -------------------------------------------------
+
+    def src_callback(match):
+
+        before = match.group(1)
+        quote_char = match.group(2)
+        value = match.group(3)
+
+        new_value = rewrite_resource_url(
+            value,
+            page_url
+        )
+
+        return (
+            before +
+            quote_char +
+            html.escape(
+                new_value,
+                quote=True
+            ) +
+            quote_char
+        )
+
+    text = re.sub(
+        r'(\bsrc\s*=\s*)(["\'])(.*?)\2',
+        src_callback,
+        text,
+        flags=re.I
+    )
+
+    # -------------------------------------------------
+    # ACTION
+    # -------------------------------------------------
+
+    def action_callback(match):
+
+        before = match.group(1)
+        quote_char = match.group(2)
+        value = match.group(3)
+
+        new_value = rewrite_resource_url(
+            value,
+            page_url
+        )
+
+        return (
+            before +
+            quote_char +
+            html.escape(
+                new_value,
+                quote=True
+            ) +
+            quote_char
+        )
+
+    text = re.sub(
+        r'(\baction\s*=\s*)(["\'])(.*?)\2',
+        action_callback,
+        text,
+        flags=re.I
+    )
+
+    # -------------------------------------------------
+    # SCRIPT
+    # -------------------------------------------------
+
+    injected_js = r"""
+<script>
+(function () {
+
+    function toProxy(url) {
+
+        try {
+
+            const u =
+                new URL(
+                    url,
+                    document.baseURI
+                );
+
+            if (
+                u.protocol === "http:" ||
+                u.protocol === "https:"
+            ) {
+                return "/proxy/" +
+                    encodeURIComponent(
+                        u.href
+                    );
+            }
+
+        } catch (e) {}
+
+        return url;
+    }
+
+
+    /*
+     * Intercepta links criados
+     * dinamicamente.
+     */
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const link =
+                event.target.closest("a");
+
+            if (!link)
+                return;
+
+            const href =
+                link.getAttribute("href");
+
+            if (!href)
+                return;
+
+            if (
+                href.startsWith("#") ||
+                href.startsWith("javascript:") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:")
+            )
+                return;
+
+            try {
+
+                const target =
+                    new URL(
+                        href,
+                        document.baseURI
+                    );
+
+                if (
+                    target.protocol === "http:" ||
+                    target.protocol === "https:"
+                ) {
+
+                    event.preventDefault();
+
+                    location.href =
+                        "/proxy/" +
+                        encodeURIComponent(
+                            target.href
+                        );
+                }
+
+            } catch (e) {}
+
+        },
+        true
+    );
+
+
+    /*
+     * window.open
+     */
+    const oldOpen =
+        window.open;
+
+    window.open =
+        function(url, target, features) {
+
+            if (url) {
+                url = toProxy(url);
+            }
+
+            return oldOpen.call(
+                window,
+                url,
+                target,
+                features
+            );
+        };
+
+
+})();
+</script>
 """
->tpircs/<
-;)()}
-
-
-;}        
-;)            
-serutaef                
-,tegrat                
-,lru                
-,wodniw                
-(llac.nepOdlo nruter            
-
-}            
-;)lru(yxorPot = lru                
-{ )lru( fi            
-
-{ )serutaef ,tegrat ,lru(noitcnuf        
-= nepo.wodniw    
-
-;nepo.wodniw        
-= nepOdlo tsnoc    
-/*     
-nepo.wodniw *     
-*/    
-
-
-;)    
-eurt        
-,}        
-
-}{ )e( hctac }            
-
-}                
-;)                        
-ferh.tegrat                            
-(tnenopmoCIRUedocne                        
-+ "/yxorp/"                        
-= ferh.noitacol                    
-
-;)(tluafeDtneverp.tneve                    
-
-{ )                
-":sptth" === locotorp.tegrat                    
-|| ":ptth" === locotorp.tegrat                    
-( fi                
-
-;)                    
-IRUesab.tnemucod                        
-,ferh                        
-(LRU wen                    
-= tegrat tsnoc                
-
-{ yrt            
-
-;nruter                
-)            
-)":let"(htiWstrats.ferh                
-|| )":otliam"(htiWstrats.ferh                
-|| )":tpircsavaj"(htiWstrats.ferh                
-|| )"#"(htiWstrats.ferh                
-( fi            
-
-;nruter                
-)ferh!( fi            
-
-;)"ferh"(etubirttAteg.knil                
-= ferh tsnoc            
-
-;nruter                
-)knil!( fi            
-
-;)"a"(tsesolc.tegrat.tneve                
-= knil tsnoc            
-
-{ )tneve( noitcnuf        
-,"kcilc"        
-(renetsiLtnevEdda.tnemucod    
-/*     
-.etnemacimanid *     
-sodairc sknil atpecretnI *     
-*/    
-
-
-}    
-;lru nruter        
-
-}{ )e( hctac }        
-
-}            
-;)                    
-ferh.u                        
-(tnenopmoCIRUedocne                    
-+ "/yxorp/" nruter                
-{ )            
-":sptth" === locotorp.u                
-|| ":ptth" === locotorp.u                
-( fi            
-
-;)                
-IRUesab.tnemucod                    
-,lru                    
-(LRU wen                
-= u tsnoc            
-
-{ yrt        
-
-{ )lru(yxorPot noitcnuf    
-
-{ )( noitcnuf(
->tpircs<
-"""r = sj_detcejni    
-
-------------------------------------------------- #    
-TPIRCS #    
-------------------------------------------------- #    
-
-)    
-I.er=sgalf        
-,txet        
-,kcabllac_noitca        
-,'2\)?*.()]'\"[()*s\=*s\noitcab\('r        
-(bus.er = txet    
-
-)        
-rahc_etouq            
-+ )            
-eurT=etouq                
-,eulav_wen                
-(epacse.lmth            
-+ rahc_etouq            
-+ erofeb            
-( nruter        
-
-)        
-lru_egap            
-,eulav            
-(lru_ecruoser_etirwer = eulav_wen        
-
-)3(puorg.hctam = eulav        
-)2(puorg.hctam = rahc_etouq        
-)1(puorg.hctam = erofeb        
-
-:)hctam(kcabllac_noitca fed    
-
-------------------------------------------------- #    
-NOITCA #    
-------------------------------------------------- #    
-
-)    
-I.er=sgalf        
-,txet        
-,kcabllac_crs        
-,'2\)?*.()]'\"[()*s\=*s\crsb\('r        
-(bus.er = txet    
-
-)        
-rahc_etouq            
-+ )            
-eurT=etouq                
-,eulav_wen                
-(epacse.lmth            
-+ rahc_etouq            
-+ erofeb            
-( nruter        
-
-)        
-lru_egap            
-,eulav            
-(lru_ecruoser_etirwer = eulav_wen        
-
-)3(puorg.hctam = eulav        
-)2(puorg.hctam = rahc_etouq        
-)1(puorg.hctam = erofeb        
-
-:)hctam(kcabllac_crs fed    
-
-------------------------------------------------- #    
-CRS #    
-------------------------------------------------- #    
-
-)    
-I.er=sgalf        
-,txet        
-,kcabllac_ferh        
-,'2\)?*.()]'\"[()*s\=*s\ferhb\('r        
-(bus.er = txet    
-
-)        
-rahc_etouq            
-+ )            
-eurT=etouq                
-,eulav_wen                
-(epacse.lmth            
-+ rahc_etouq            
-+ erofeb            
-( nruter        
-
-)        
-lru_egap            
-,eulav            
-(lru_ecruoser_etirwer = eulav_wen        
-
-)3(puorg.hctam = eulav        
-)2(puorg.hctam = rahc_etouq        
-)1(puorg.hctam = erofeb        
-
-:)hctam(kcabllac_ferh fed    
-
-------------------------------------------------- #    
-FERH #    
-------------------------------------------------- #    
-
-)    
-I.er=sgalf        
-,txet        
-,""        
-,">*]>^[]"\'["r        
-"yciloP-ytiruceS-tnetnoC"r        
-"]"\'[*s\=*s\viuqe-ptth"r        
-"*]>^[b\atem<"r        
-(bus.er = txet    
-.yxorp o raeuqolb edop euq PSC evomeR #    
 
-)    
-"ecalper"=srorre        
-,"8-ftu"        
-(edoced.atad = txet    
+    # Injeta antes do </head>
+    if re.search(
+        r"</head\s*>",
+        text,
+        flags=re.I
+    ):
 
-:)lru_egap ,atad(lmth_etirwer fed
+        text = re.sub(
+            r"</head\s*>",
+            injected_js + "</head>",
+            text,
+            count=1,
+            flags=re.I
+        )
 
+    else:
+        text = injected_js + text
 
-eulav nruter    
+    return text.encode("utf-8")
 
-)etulosba(lru_yxorp_ekam nruter        
-:))"//:sptth" ,"//:ptth"((htiwstrats.etulosba fi    
 
-eulav nruter        
-:noitpecxE tpecxe    
-)eulav ,lru_egap(niojlru = etulosba        
-:yrt    
+class Handler(BaseHTTPRequestHandler):
 
-eulav nruter        
-:))    
-":let"        
-,":otliam"        
-,":bolb"        
-,":atad"        
-,":tpircsavaj"        
-,"#"        
-((htiwstrats.eulav fi    
-sameuqse sessen rexem oãN #    
+    protocol_version = "HTTP/1.1"
 
-eulav nruter        
-:eulav ton fi    
+    def log_message(self, fmt, *args):
+        print("[HTTP]", fmt % args)
 
-)(pirts.eulav = eulav    
-:)lru_egap ,eulav(lru_ecruoser_etirwer fed
+    def do_GET(self):
+        self.proxy("GET")
 
+    def do_POST(self):
+        self.proxy("POST")
 
-ssap            
-:noitpecxE tpecxe        
+    def do_HEAD(self):
+        self.proxy("HEAD")
 
-eulav.lesrom = ]eman[]niamod[seikooc                
-:)(smeti.c ni lesrom ,eman rof            
+    def proxy(self, method):
 
-)eulav(daol.c            
-)(eikooCelpmiS = c            
-:yrt        
-:seulav ni eulav rof    
+        target = extract_proxy_url(
+            self.path
+        )
 
-][ = seulav        
-:noitpecxE tpecxe    
-)][ ,"eikooC-teS"(lla_teg.sredaeh = seulav        
-:yrt    
+        # Primeira página
+        if target is None:
 
-}{ = ]niamod[seikooc        
-:seikooc ni ton niamod fi    
+            if self.path == "/":
+                target = START_URL
+            else:
+                self.send_error(
+                    404,
+                    "Página não encontrada"
+                )
+                return
 
-)lru(fo_niamod = niamod    
-:)sredaeh ,lru(seikooc_evas fed
+        print()
+        print("================================")
+        print("URL:", target)
+        print("================================")
 
+        request_headers = {
+            "User-Agent": USER_AGENT,
 
-)    
-)(smeti.raj ni eulav ,eman rof        
-"}eulav{=}eman{"f        
-(nioj." ;" nruter    
+            "Accept":
+                "text/html,application/xhtml+xml,"
+                "application/xml;q=0.9,"
+                "image/avif,image/webp,"
+                "image/apng,*/*;q=0.8",
 
-)}{ ,niamod(teg.seikooc = raj    
+            "Accept-Language":
+                "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 
-)lru(fo_niamod = niamod    
-:)lru(redaeh_eikooc_teg fed
+            # Impede compressão que dificultaria
+            # a alteração do HTML.
+            "Accept-Encoding":
+                "identity",
+
+            "Cache-Control":
+                "no-cache"
+        }
+
+        cookie = get_cookie_header(target)
+
+        if cookie:
+            request_headers["Cookie"] = cookie
+
+        body = None
 
+        if method == "POST":
+
+            try:
+                length = int(
+                    self.headers.get(
+                        "Content-Length",
+                        "0"
+                    )
+                )
+            except Exception:
+                length = 0
+
+            body = self.rfile.read(length)
+
+            content_type = self.headers.get(
+                "Content-Type"
+            )
+
+            if content_type:
+                request_headers[
+                    "Content-Type"
+                ] = content_type
+
+        try:
+
+            req = Request(
+                target,
+                data=body,
+                headers=request_headers,
+                method=method
+            )
+
+            response = urlopen(
+                req,
+                context=ssl_context,
+                timeout=30
+            )
+
+            save_cookies(
+                target,
+                response.headers
+            )
+
+            data = response.read()
+
+            content_type = response.headers.get(
+                "Content-Type",
+                "application/octet-stream"
+            )
+
+            # -----------------------------------------
+            # SOMENTE HTML É MODIFICADO
+            # -----------------------------------------
+
+            is_html = (
+                "text/html"
+                in content_type.lower()
+            )
+
+            if is_html:
+
+                data = rewrite_html(
+                    data,
+                    target
+                )
+
+                content_type = (
+                    "text/html; charset=utf-8"
+                )
+
+            self.send_response(
+                response.status
+            )
+
+            self.send_header(
+                "Content-Type",
+                content_type
+            )
 
-colten.)lru(esraplru nruter    
-:)lru(fo_niamod fed
+            self.send_header(
+                "Content-Length",
+                str(len(data))
+            )
 
+            self.send_header(
+                "Cache-Control",
+                "no-cache"
+            )
 
-enoN nruter    
+            # Redirecionamentos:
+            # transforma Location externo
+            # em URL do proxy.
+            location = response.headers.get(
+                "Location"
+            )
 
-ssap        
-:noitpecxE tpecxe    
-lru nruter            
-:))"//:sptth" ,"//:ptth"((htiwstrats.lru fi        
+            if location:
 
-)]:)xiferp(nel[htap(etouqnu = lru        
-:yrt    
+                absolute = urljoin(
+                    target,
+                    location
+                )
 
-enoN nruter        
-:)xiferp(htiwstrats.htap ton fi    
+                if absolute.startswith(
+                    ("http://", "https://")
+                ):
 
-"/yxorp/" = xiferp    
-:)htap(lru_yxorp_tcartxe fed
+                    self.send_header(
+                        "Location",
+                        make_proxy_url(
+                            absolute
+                        )
+                    )
 
+            self.end_headers()
 
-)""=efas ,lru(etouq + "/yxorp/" nruter    
-:)lru(lru_yxorp_ekam fed
+            if method != "HEAD":
+                self.wfile.write(data)
 
+        except HTTPError as error:
 
-}{ = seikooc
-oinímod rop sodarapes seikooC #
+            data = error.read()
 
-)(txetnoc_tluafed_etaerc.lss = txetnoc_lss
+            save_cookies(
+                target,
+                error.headers
+            )
 
+            self.send_response(
+                error.code
+            )
+
+            content_type = error.headers.get(
+                "Content-Type",
+                "text/html; charset=utf-8"
+            )
+
+            self.send_header(
+                "Content-Type",
+                content_type
+            )
+
+            self.send_header(
+                "Content-Length",
+                str(len(data))
+            )
+
+            self.end_headers()
+
+            if method != "HEAD":
+                self.wfile.write(data)
+
+        except (URLError, TimeoutError) as error:
+
+            print(
+                "[ERRO DE CONEXÃO]",
+                error
+            )
+
+            self.send_error(
+                502,
+                "Erro ao conectar ao site"
+            )
+
+        except Exception as error:
+
+            print(
+                "[ERRO]",
+                repr(error)
+            )
+
+            self.send_error(
+                500,
+                str(error)
+            )
+
+
+print(
+    "===================================="
 )
-"63.735/irafaS eliboM 0.0.0.041/emorhC"    
-" )okceG ekil ,LMTHK( 63.735/tiKbeWelppA"    
-" )K ;41 diordnA ;xuniL( 0.5/allizoM"    
-( = TNEGA_RESU
 
-"/8niw/niw.7resworb//:sptth" = LRU_TRATS
+print(
+    f"Proxy iniciado:"
+    f" http://127.0.0.1:{PORT}"
+)
 
-)00006 ,00001(tnidnar.modnar = TROP
-"0.0.0.0" = TSOH
+print(
+    "===================================="
+)
 
-modnar tropmi
-er tropmi
-lmth tropmi
-lss tropmi
-eikooCelpmiS tropmi seikooc.ptth morf
-esraplru ,etouqnu ,etouq ,niojlru tropmi esrap.billru morf
-rorrELRU ,rorrEPTTH tropmi rorre.billru morf
-nepolru ,tseuqeR tropmi tseuqer.billru morf
-reldnaHtseuqeRPTTHesaB ,revreSPTTHgnidaerhT tropmi revres.ptth morf
-'FOE'<< yp.x > tac
+server = ThreadingHTTPServer(
+    (HOST, PORT),
+    Handler
+)
+
+server.serve_forever()
+EOF
+
+nohup python x.py >/dev/null 2>&1 </dev/null & disown
+
+
+nohup cloudflared tunnel --url http://localhost:2000 > "$HOME/cloudflared.log" 2>&1 < /dev/null & disown
+
+(
+  until URL=$(grep -oE 'https://[a-zA-Z0-9.-]+\.trycloudflare\.com' "$HOME/cloudflared.log" 2>/dev/null | head -n1) && [ -n "$URL" ]; do
+    sleep 1
+  done
+
+  for N in $(seq 1 100); do
+    if [ "$N" -eq 1 ]; then
+      NOME="Win-8-cloud"
+    else
+      NOME="Win-8-cloud-$N"
+    fi
+
+    RESPOSTA=$(curl -sS -G 'https://urlvanish.com/api/shorten' \
+      --data-urlencode 'format=simple' \
+      --data-urlencode "url=$URL" \
+      --data-urlencode "shorturl=$NOME" 2>/dev/null)
+
+    if [[ "$RESPOSTA" != *"already taken"* ]] &&
+       [[ "$RESPOSTA" != *"Missing the url parameter"* ]] &&
+       [[ "$RESPOSTA" == http* ]]; then
+      printf '%s\n' "$RESPOSTA"
+      break
+    fi
+  done
+) &
+disown
